@@ -36,5 +36,7 @@ class Student
        SQL
     DB[:conn].execute(sql)
   end 
+  
+  
  
 end
