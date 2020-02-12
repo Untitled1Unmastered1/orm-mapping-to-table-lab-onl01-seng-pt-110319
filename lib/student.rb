@@ -2,10 +2,10 @@ class Student
  
   attr_accessor :name, :grade, :id
  
-  def initialize(name, album, id=nil)
+  def initialize(name, grade, id=nil)
     @id = id
     @name = name
-    @album = album
+    @grade = grade 
   end
  
   def self.create_table
@@ -21,11 +21,11 @@ class Student
  
   def save
     sql = <<-SQL
-      INSERT INTO songs (name, album) 
+      INSERT INTO student (name, grade) 
       VALUES (?, ?)
     SQL
  
-    DB[:conn].execute(sql, self.name, self.album)
+    DB[:conn].execute(sql, self.name, self.grade)
  
   end
  
