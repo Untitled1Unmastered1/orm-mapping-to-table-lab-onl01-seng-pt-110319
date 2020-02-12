@@ -13,8 +13,7 @@ class Student
     sql =  <<-SQL 
       CREATE TABLE IF NOT EXISTS students (
         id INTEGER PRIMARY KEY, 
-        name TEXT, 
-        album TEXT
+        name TEXT
         )
         SQL
     DB[:conn].execute(sql) 
@@ -30,8 +29,9 @@ class Student
  
   end
   
-  def self.drop_table 
-    sql =  <<-SQL 
-    
+  # def self.drop_table 
+  #   sql =  <<-SQL 
+  #   DROP TABLE students (
+  #   )
  
 end
